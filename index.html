@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mr.Tのポートフォリオ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header>
+    <div class="logo">Mr.T</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#hobby">Hobby</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+      <button id="darkModeToggle" style="margin-left:15px; padding:5px 10px;">🌙</button>
+    </nav>
+  </header>
+
+  <!-- ヒーロー -->
+  <section class="hero">
+    <h1>趣味から生まれたアイデアを形にするWebエンジニア</h1>
+    <p>コーヒー・旅行・観葉植物から得た発想で、UI/UXにこだわったWeb制作をしています</p>
+    <a href="#portfolio">作品を見る</a>
+  </section>
+
+  <!-- Aboutセクション -->
+  <section id="about" class="fade-in">
+    <h2>About Me</h2>
+    <p>私はものづくりとデジタルが好きで、前職では工場総務という立場からDX推進に挑戦しました。
+       趣味のコーヒー、旅行、観葉植物から得た発想をWeb開発に生かしています。
+       初めて作ったWeb作品はCatCoffeeのホームページで、ここからWeb制作にのめり込みました。</p>
+  </section>
+
+  <!-- Hobbyセクション -->
+  <section id="hobby" class="fade-in">
+    <h2>Hobby</h2>
+    <div class="hobby-container">
+      <div class="hobby-card">
+        <h3>コーヒー</h3>
+        <p>毎朝豆を挽いて淹れる1杯が至福の時間。この体験から最初のポートフォリオ『CatCoffee』が生まれました。</p>
+      </div>
+      <div class="hobby-card">
+        <h3>旅行</h3>
+        <p>家族で沖縄旅行、大学院では学会でロシアへ。旅行のワクワク感をWebで表現し、『SAMURAI travel』を制作しました。</p>
+      </div>
+      <div class="hobby-card">
+        <h3>観葉植物</h3>
+        <p>家で育てる植物に名前を付け愛着を持っています。将来は庭にヤシの木を植えたい。こうした発想力がUI/UXデザインに活きています。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolioセクション（折りたたみ詳細版） -->
+  <section id="portfolio" class="fade-in">
+    <h2>Portfolio</h2>
+    <div class="portfolio-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- 1. NAGOYAMESHI -->
+      <div class="portfolio-card fade-in border rounded-lg p-4 shadow">
+        <h3>NAGOYAMESHI</h3>
+        <p>SpringBoot学習の集大成。UI/UXにこだわりHerokuにデプロイ済。</p>
+        <button onclick="toggleDetail('nagoyameshi-detail')">詳細を見る</button>
+        <div id="nagoyameshi-detail" class="app-detail hidden mt-2 p-2 border-t">
+          <img src="screenshots/nagoyameshi-thumb.png" alt="NAGOYAMESHI" class="rounded mb-2">
+          <p>学習中にSpring BootとThymeleafを用いてフルスタック開発を体験。課題解決力とREST API理解を深めました。</p>
+          <p>苦労ポイント：DB設計、画面遷移、レスポンシブ対応</p>
+          <p>
+            <a href="https://github.com/yourname/nagoyameshi" target="_blank">GitHubリポジトリ</a> |
+            <a href="https://nagoyameshi-app-2025-6a8adc2eb863.herokuapp.com/" target="_blank">アプリにアクセス</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- 2. SAMURAI travel -->
+      <div class="portfolio-card fade-in border rounded-lg p-4 shadow">
+        <h3>SAMURAI travel</h3>
+        <p>旅行の楽しさをWebで表現した民宿予約アプリ。</p>
+        <button onclick="toggleDetail('samurai-detail')">詳細を見る</button>
+        <div id="samurai-detail" class="app-detail hidden mt-2 p-2 border-t">
+          <img src="screenshots/samurai-thumb.png" alt="SAMURAI travel" class="rounded mb-2">
+          <p>教材を参考にReact + Firebaseで作成。予約フローの実装やUX改善に挑戦しました。</p>
+          <p>苦労ポイント：フォームバリデーション、データ連携</p>
+          <p>
+            <a href="https://github.com/yourname/samurai-travel" target="_blank">GitHubリポジトリ</a> |
+            <a href="https://samuraitraberu202507-4b2082511052.herokuapp.com/" target="_blank">アプリにアクセス</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- 3. まもログ -->
+      <div class="portfolio-card fade-in border rounded-lg p-4 shadow">
+        <h3>まもログ</h3>
+        <p>完全オリジナル作品でReact/TypeScriptリファクタリング予定。</p>
+        <button onclick="toggleDetail('mamolog-detail')">詳細を見る</button>
+        <div id="mamolog-detail" class="app-detail hidden mt-2 p-2 border-t">
+          <img src="screenshots/mamolog-thumb.png" alt="まもログ" class="rounded mb-2">
+          <p>Todo管理・日記/写真アップロード・カレンダー表示・認証機能をまとめた学習用Webアプリ。</p>
+          <p>苦労ポイント：JWT認証、S3写真アップロード、Axios連携など</p>
+          <p>
+            <a href="https://github.com/yourname/mamolog" target="_blank">GitHubリポジトリ</a> |
+            <a href="#">アプリにアクセス</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- 4. CatCoffee（HP） -->
+      <div class="portfolio-card fade-in border rounded-lg p-4 shadow">
+        <h3>CatCoffee（HP）</h3>
+        <p>趣味のコーヒーがきっかけで作ったホームページ。</p>
+        <button onclick="toggleDetail('catcoffee-detail')">詳細を見る</button>
+        <div id="catcoffee-detail" class="app-detail hidden mt-2 p-2 border-t">
+          <img src="screenshots/catcoffee-thumb.png" alt="CatCoffee" class="rounded mb-2">
+          <p>HTML/CSSで制作。Web制作の出発点となった作品で、デザイン表現の基礎を学びました。</p>
+          <p>苦労ポイント：レスポンシブ対応、画像最適化</p>
+          <p>
+            <a href="https://github.com/yourname/catcoffee" target="_blank">GitHubリポジトリ</a> |
+            <a href="https://www.portfoiio.online/" target="_blank">サイトを見る</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- 5. SocialTech -->
+      <div class="portfolio-card fade-in border rounded-lg p-4 shadow">
+        <h3>SocialTech</h3>
+        <p>教材参考のコーポレートサイト。HTML/CSSの実装力を示す作品。</p>
+        <button onclick="toggleDetail('socialtech-detail')">詳細を見る</button>
+        <div id="socialtech-detail" class="app-detail hidden mt-2 p-2 border-t">
+          <img src="screenshots/socialtech-thumb.png" alt="SocialTech" class="rounded mb-2">
+          <p>HTML/CSSでデザイン再現。UI整列やグリッドレイアウトを中心に学習しました。</p>
+          <p>苦労ポイント：レスポンシブ、クロスブラウザ対応</p>
+          <p>
+            <a href="https://github.com/yourname/socialtech" target="_blank">GitHubリポジトリ</a> |
+            <a href="https://html-css-advanced-202406ver-6c937a8fe355.herokuapp.com/" target="_blank">サイトを見る</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- 6. SampleApp1 -->
+      <div class="portfolio-card fade-in border rounded-lg p-4 shadow">
+        <h3>SampleApp1</h3>
+        <p>学習用に作ったサンプルWebアプリ。</p>
+        <button onclick="toggleDetail('sample1-detail')">詳細を見る</button>
+        <div id="sample1-detail" class="app-detail hidden mt-2 p-2 border-t">
+          <img src="screenshots/sample1-thumb.png" alt="SampleApp1" class="rounded mb-2">
+          <p>React基礎学習用。コンポーネント分割やステート管理を体験しました。</p>
+          <p>苦労ポイント：イベントハンドリング、状態同期</p>
+          <p>
+            <a href="https://github.com/yourname/sampleapp1" target="_blank">GitHubリポジトリ</a> |
+            <a href="#">アプリにアクセス</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- 7. SampleApp2 -->
+      <div class="portfolio-card fade-in border rounded-lg p-4 shadow">
+        <h3>SampleApp2</h3>
+        <p>React + API連携の練習用アプリ。</p>
+        <button onclick="toggleDetail('sample2-detail')">詳細を見る</button>
+        <div id="sample2-detail" class="app-detail hidden mt-2 p-2 border-t">
+          <img src="screenshots/sample2-thumb.png" alt="SampleApp2" class="rounded mb-2">
+          <p>外部APIからデータ取得・表示を学習。コンポーネント間通信も体験しました。</p>
+          <p>苦労ポイント：非同期処理、エラーハンドリング</p>
+          <p>
+            <a href="https://github.com/yourname/sampleapp2" target="_blank">GitHubリポジトリ</a> |
+            <a href="#">アプリにアクセス</a>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contactセクション -->
+  <section id="contact" class="fade-in">
+    <h2>Contact</h2>
+    <div class="contact">
+      <p>Email: <a href="mailto:t@gmail.com">t@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/ttttt" target="_blank">ttttt</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/yourlinkedin" target="_blank">yourlinkedin</a></p>
+      <p>作品や制作プロセスについての質問も歓迎です！</p>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer>
+    &copy; 2025 T All Rights Reserved.
+  </footer>
+
+  <script src="index.js"></script>
+  <script>
+    function toggleDetail(id) {
+      const el = document.getElementById(id);
+      el.classList.toggle('hidden');
+    }
+  </script>
+</body>
+</html>
