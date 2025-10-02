@@ -28,3 +28,9 @@ toggleButton.addEventListener('click', () => {
   // アイコン切替
   toggleButton.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
 });
+
+// 詳細折りたたみ
+function toggleDetail(id) {
+  const detail = document.getElementById(id);
+  detail.classList.toggle("hidden");
+}

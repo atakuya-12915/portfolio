@@ -21,102 +21,124 @@
   </header>
 
   <!-- ヒーロー -->
-  <section class="hero">
+  <section class="hero fade-in">
     <h1>趣味から生まれたアイデアを形にするWebエンジニア</h1>
     <p>コーヒー・旅行・観葉植物から得た発想で、UI/UXにこだわったWeb制作をしています</p>
     <a href="#portfolio" class="btn">作品を見る</a>
   </section>
 
-  <!-- About -->
+  <!-- Aboutセクション -->
   <section id="about" class="fade-in">
     <h2>About Me</h2>
-    <p>前職では工場総務としてDX推進に挑戦。趣味から得た発想をWeb開発に活かしています。
-       初作品は『CatCoffee』のホームページで、これがWeb制作にのめり込むきっかけになりました。</p>
+    <p>前職では工場総務としてDX推進に挑戦し、Power PlatformやRPAを用いた業務改善をリードしました。  
+       趣味のコーヒー、旅行、観葉植物から得た発想をWeb開発に活かし、ユーザー体験を意識した制作を心がけています。  
+       最初の作品はコーヒーをテーマにした『CatCoffee』で、そこからWeb開発にのめり込みました。</p>
   </section>
 
-  <!-- Hobby -->
+  <!-- Hobbyセクション -->
   <section id="hobby" class="fade-in">
-    <h2>Hobby</h2>
+    <h2>Hobby ~発想の源泉~</h2>
     <div class="hobby-container">
       <div class="hobby-card">
         <h3>コーヒー</h3>
-        <p>毎朝豆を挽いて淹れる時間から『CatCoffee』が生まれました。</p>
+        <p>毎朝豆を挽いて淹れる1杯から始まったのが『CatCoffee』。趣味が作品に直結しました。</p>
       </div>
       <div class="hobby-card">
         <h3>旅行</h3>
-        <p>旅行のワクワク感を表現するために『SAMURAI travel』を制作しました。</p>
+        <p>沖縄旅行や海外学会の経験から、ワクワク感をWebに落とし込み『SAMURAI travel』を制作しました。</p>
       </div>
       <div class="hobby-card">
         <h3>観葉植物</h3>
-        <p>植物の成長や名前付けの楽しさをUI/UXの発想に活かしています。</p>
+        <p>家で植物を育てる体験がUI/UXデザインの発想源に。成長や変化をWebアプリでも表現しています。</p>
       </div>
     </div>
   </section>
 
-  <!-- Portfolio -->
+  <!-- Portfolioセクション -->
   <section id="portfolio" class="fade-in">
     <h2>Portfolio</h2>
 
     <!-- Webアプリ -->
-    <h3>Webアプリ</h3>
+    <h3 class="category">Webアプリ</h3>
     <div class="portfolio-container">
-      <div class="portfolio-card">
+      <!-- NAGOYAMESHI -->
+      <div class="portfolio-card fade-in">
         <h4>NAGOYAMESHI</h4>
-        <img src="screenshots/nagoyameshi-thumb.png" alt="NAGOYAMESHI">
-        <p>SpringBoot学習の集大成。UI/UXにこだわりHerokuにデプロイ済。</p>
-        <a href="https://github.com/yourname/nagoyameshi" target="_blank">GitHub</a>
+        <p>SpringBoot学習の集大成。Herokuにデプロイ済。</p>
+        <button onclick="toggleDetail('nagoyameshi-detail')">詳細を見る</button>
+        <div id="nagoyameshi-detail" class="app-detail hidden">
+          <img src="screenshots/nagoyameshi-thumb.png" alt="NAGOYAMESHI">
+          <p>Spring Boot + Thymeleaf でフルスタック開発を体験。REST APIやDB設計を習得しました。</p>
+          <p>
+            <a href="https://github.com/yourname/nagoyameshi" target="_blank">GitHub</a> |
+            <a href="https://nagoyameshi-app-2025-6a8adc2eb863.herokuapp.com/" target="_blank">公開アプリ</a>
+          </p>
+        </div>
       </div>
-      <div class="portfolio-card">
+
+      <!-- SAMURAI travel -->
+      <div class="portfolio-card fade-in">
         <h4>SAMURAI travel</h4>
-        <img src="screenshots/samurai-thumb.png" alt="SAMURAI travel">
-        <p>React + Firebaseで開発した民宿予約アプリ。</p>
-        <a href="https://github.com/yourname/samurai-travel" target="_blank">GitHub</a>
+        <p>旅行の楽しさを表現した民宿予約アプリ。</p>
+        <button onclick="toggleDetail('samurai-detail')">詳細を見る</button>
+        <div id="samurai-detail" class="app-detail hidden">
+          <img src="screenshots/samurai-thumb.png" alt="SAMURAI travel">
+          <p>React + Firebase で実装。UX改善や予約フローに注力。</p>
+          <p>
+            <a href="https://github.com/yourname/samurai-travel" target="_blank">GitHub</a> |
+            <a href="https://samuraitraberu202507-4b2082511052.herokuapp.com/" target="_blank">公開アプリ</a>
+          </p>
+        </div>
       </div>
-      <div class="portfolio-card">
+
+      <!-- まもログ -->
+      <div class="portfolio-card fade-in">
         <h4>まもログ</h4>
-        <img src="screenshots/mamolog-thumb.png" alt="まもログ">
-        <p>Todo＋日記＋カレンダー＋認証機能付きアプリ。</p>
-        <a href="https://github.com/yourname/mamolog" target="_blank">GitHub</a>
+        <p>オリジナルWebアプリ。React/TypeScriptでリファクタリング予定。</p>
+        <button onclick="toggleDetail('mamolog-detail')">詳細を見る</button>
+        <div id="mamolog-detail" class="app-detail hidden">
+          <img src="screenshots/mamolog-thumb.png" alt="まもログ">
+          <p>Todo管理、日記/写真アップロード、カレンダー機能、認証を搭載。</p>
+          <p>
+            <a href="https://github.com/yourname/mamolog" target="_blank">GitHub</a>
+          </p>
+        </div>
       </div>
     </div>
 
     <!-- Webサイト -->
-    <h3>Webサイト</h3>
+    <h3 class="category">Webサイト</h3>
     <div class="portfolio-container">
-      <div class="portfolio-card">
+      <div class="portfolio-card fade-in">
         <h4>CatCoffee</h4>
-        <img src="screenshots/catcoffee-thumb.png" alt="CatCoffee">
-        <p>趣味から作った最初のWebページ。</p>
-        <a href="https://github.com/yourname/catcoffee" target="_blank">GitHub</a>
+        <p>初めて作ったWebサイト。HTML/CSSで制作。</p>
       </div>
-      <div class="portfolio-card">
-        <h4>SocialTech</h4>
-        <img src="screenshots/socialtech-thumb.png" alt="SocialTech">
-        <p>スクール課題で作成した企業サイト模写。</p>
-        <a href="https://github.com/yourname/socialtech" target="_blank">GitHub</a>
+      <div class="portfolio-card fade-in">
+        <h4>Social Tech</h4>
+        <p>学習用に作成した企業サイト模写。</p>
       </div>
-      <div class="portfolio-card">
-        <h4>My portfolio（HTML版）</h4>
-        <img src="screenshots/portfolio-thumb.png" alt="My portfolio">
-        <p>現在ご覧いただいているこのサイトです。</p>
+      <div class="portfolio-card fade-in">
+        <h4>My Portfolio (HTML版)</h4>
+        <p>このサイト自体をHTML/CSSで作成。</p>
       </div>
     </div>
 
     <!-- Reactリファクタリング -->
-    <h3>Reactリファクタリング</h3>
+    <h3 class="category">Reactリファクタリング</h3>
     <div class="portfolio-container">
-      <div class="portfolio-card">
-        <h4>My portfolio（React版）</h4>
-        <p>React + TypeScriptでリファクタリング済。公開中。</p>
+      <div class="portfolio-card fade-in">
+        <h4>まもログ React版</h4>
+        <p>進行中：認証機能まで実装済。UI改善中。</p>
+        <pre><code>{`// サンプルコード断片
+const [todos, setTodos] = useState([]);
+useEffect(() => {
+  fetch("/api/todos").then(res => res.json()).then(setTodos);
+}, []);
+`}</code></pre>
       </div>
-      <div class="portfolio-card">
-        <h4>まもログ（React版）</h4>
-        <p>進行中：認証・写真アップロード機能の実装まで完了</p>
-        <pre><code>
-// 例：JWT認証用のコード断片
-const token = localStorage.getItem("token");
-axios.get("/api/todos", { headers: { Authorization: `Bearer ${token}` }});
-        </code></pre>
+      <div class="portfolio-card fade-in">
+        <h4>My Portfolio (React版)</h4>
+        <p>完成済：本HTML版をReactへ移植。SPA構成に対応。</p>
       </div>
     </div>
   </section>
@@ -124,13 +146,15 @@ axios.get("/api/todos", { headers: { Authorization: `Bearer ${token}` }});
   <!-- Contact -->
   <section id="contact" class="fade-in">
     <h2>Contact</h2>
-    <p>ご連絡は <a href="mailto:yourmail@example.com">yourmail@example.com</a> までお願いします。</p>
+    <p>GitHub: <a href="https://github.com/yourname" target="_blank">yourname</a></p>
+    <p>Email: example@mail.com</p>
   </section>
 
+  <!-- フッター -->
   <footer>
-    <p>&copy; 2025 Mr.T Portfolio</p>
+    <p>&copy; 2025 Mr.T</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>

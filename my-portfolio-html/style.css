@@ -6,15 +6,8 @@ body {
   color: #333;
   line-height: 1.6;
 }
-
-h1, h2, h3, h4 {
-  margin: 0 0 10px;
-}
-
-a {
-  color: #0077cc;
-  text-decoration: none;
-}
+h1, h2, h3, h4 { margin: 0 0 10px; }
+a { color: #0077cc; text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 /* ヘッダー */
@@ -26,14 +19,15 @@ header {
   color: #fff;
   padding: 10px 20px;
 }
-header nav a {
-  margin-left: 15px;
-  color: #fff;
-}
+header nav a { margin-left: 15px; color: #fff; }
 #darkModeToggle {
   margin-left: 15px;
   padding: 5px 10px;
   cursor: pointer;
+  background: #444;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
 }
 
 /* ヒーロー */
@@ -63,14 +57,21 @@ h2 {
   border-bottom: 2px solid #0077cc;
   display: inline-block;
 }
+.category {
+  margin-top: 40px;
+  margin-bottom: 15px;
+  color: #0077cc;
+}
 
 /* Hobby */
 .hobby-container {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 .hobby-card {
   flex: 1;
+  min-width: 250px;
   background: #fff;
   padding: 15px;
   border-radius: 8px;
@@ -94,10 +95,12 @@ h2 {
   border-radius: 4px;
   margin-bottom: 10px;
 }
+.app-detail.hidden { display: none; }
 pre {
   background: #f4f4f4;
   padding: 10px;
   overflow-x: auto;
+  border-radius: 6px;
 }
 
 /* フッター */
@@ -109,17 +112,23 @@ footer {
   margin-top: 30px;
 }
 
+/* アニメーション */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ダークモード */
 body.dark {
   background: #121212;
   color: #eee;
 }
 body.dark header,
-body.dark footer {
-  background: #000;
-}
+body.dark footer { background: #000; }
 body.dark .portfolio-card,
-body.dark .hobby-card {
-  background: #1e1e1e;
-  color: #eee;
-}
+body.dark .hobby-card { background: #1e1e1e; color: #eee; }
