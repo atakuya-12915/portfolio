@@ -1,128 +1,125 @@
- /* --- 基本リセット --- */
-    * { margin:0; padding:0; box-sizing:border-box; font-family: 'Arial', sans-serif; }
-    body { line-height: 1.6; color: #333; background-color: #fefcf7; }
-
-    /* --- ヘッダー --- */
-    header { background-color:#8FBC8F; padding:20px; display:flex; justify-content:space-between; align-items:center; }
-    header nav a { margin-left:15px; color:#fff; text-decoration:none; font-weight:bold; }
-
-    /* --- ヒーロー --- */
-    .hero { background: linear-gradient(to bottom right, #FFE4B5, #87CEFA); text-align:center; padding:100px 20px; }
-    .hero h1 { font-size:2.5rem; margin-bottom:20px; }
-    .hero p { font-size:1.2rem; margin-bottom:30px; }
-    .hero a { text-decoration:none; background:#FF7F50; color:#fff; padding:10px 20px; border-radius:5px; }
-
-    /* --- セクション共通 --- */
-    section { padding:80px 20px; max-width:1000px; margin:0 auto; }
-    h2 { font-size:2rem; margin-bottom:40px; text-align:center; color:#2E8B57; }
-
-    /* --- Hobbyセクション --- */
-    .hobby-container { display:flex; justify-content:space-around; flex-wrap:wrap; gap:20px; }
-    .hobby-card { background:#fff8dc; padding:20px; border-radius:10px; flex:1 1 250px; text-align:center; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
-    .hobby-card h3 { margin-bottom:15px; color:#8B4513; }
-
-    /* --- Portfolioセクション --- */
-    .portfolio-container { display:flex; flex-wrap:wrap; justify-content:space-around; gap:20px; }
-    .portfolio-card { background:#fffaf0; padding:20px; border-radius:10px; flex:1 1 300px; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
-    .portfolio-card h3 { margin-bottom:15px; color:#FF7F50; }
-    .portfolio-card a { text-decoration:none; color:#1E90FF; }
-
-    /* --- Contactセクション --- */
-    .contact p { text-align:center; margin-bottom:10px; }
-    .contact a { color:#1E90FF; text-decoration:none; }
-
-    /* --- フッター --- */
-    footer { background:#8FBC8F; text-align:center; padding:20px; color:#fff; }
-
-/* --- フェードインアニメーション --- */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.8s ease-out;
+/* ベース */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
 }
 
-.fade-in.show {
-  opacity: 1;
-  transform: translateY(0);
+h1, h2, h3, h4 {
+  margin: 0 0 10px;
 }
 
-/* --- Portfolioカードホバー --- */
-.portfolio-card:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-  transition: all 0.3s ease;
+a {
+  color: #0077cc;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+/* ヘッダー */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #222;
+  color: #fff;
+  padding: 10px 20px;
+}
+header nav a {
+  margin-left: 15px;
+  color: #fff;
+}
+#darkModeToggle {
+  margin-left: 15px;
+  padding: 5px 10px;
+  cursor: pointer;
 }
 
-/* ダークモード用 */
-body.dark-mode {
-  background-color: #1e1e1e;
-  color: #f0f0f0;
+/* ヒーロー */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #0077cc, #00aacc);
+  color: #fff;
+}
+.hero .btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #fff;
+  color: #0077cc;
+  border-radius: 6px;
 }
 
-body.dark-mode header {
-  background-color: #2e8b57;
+/* セクション */
+section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+h2 {
+  margin-bottom: 20px;
+  border-bottom: 2px solid #0077cc;
+  display: inline-block;
 }
 
-body.dark-mode .hero {
-  background: linear-gradient(to bottom right, #2c3e50, #34495e);
-  color: #f0f0f0;
+/* Hobby */
+.hobby-container {
+  display: flex;
+  gap: 20px;
+}
+.hobby-card {
+  flex: 1;
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-body.dark-mode .hobby-card,
-body.dark-mode .portfolio-card {
-  background-color: #2c2c2c;
-  color: #f0f0f0;
+/* Portfolio */
+.portfolio-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.portfolio-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.portfolio-card img {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+pre {
+  background: #f4f4f4;
+  padding: 10px;
+  overflow-x: auto;
 }
 
-body.dark-mode footer {
-  background-color: #2e8b57;
-}
-
- /* --- レスポンシブ --- */
-/* @media(max-width:768px){
-  .hobby-container, .portfolio-container {
-    flex-direction:column; align-items:center; }
-} */
-
-/* PC画面用（横幅1200px以上を目安） */
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1100px;  /* 中央寄せで最大幅を広げる */
-    margin: 0 auto;
-    padding: 0 40px;     /* 左右に余白を追加 */
-  }
-  header {
-    padding: 20px 40px; /* 上下左右の余白を広げる */
-  }
-
-  header nav a,
-  header nav button {
-    margin-left: 25px;   /* メニューの間隔を広げる */
-    font-size: 1.1rem;  /* フォントサイズを少し大きく */
-  }
-
-  .hero {
-    padding: 100px 0;       /* 上下余白を広げる */
-    font-size: 1.3rem;      /* 見出し・本文の文字を少し大きく */
-    line-height: 1.6;       /* 行間も広げる */
-  }
-
-  .hobby-card,
-  .portfolio-card {
-    padding: 30px 40px;     /* カード内余白を広げる */
-    font-size: 1.1rem;      /* 本文文字サイズを少し大きく */
-  }
-
-  .portfolio-card {
-    margin-bottom: 40px;    /* 下部の間隔を広げる */
-  }
-
+/* フッター */
 footer {
-    padding: 30px 40px;    /* フッターの上下左右余白を広げる */
-    font-size: 1rem;
-  }
+  text-align: center;
+  padding: 15px;
+  background: #222;
+  color: #fff;
+  margin-top: 30px;
+}
 
-  section {
-    padding: 80px 0;     /* セクション上下の余白を広げる */
-  }
+/* ダークモード */
+body.dark {
+  background: #121212;
+  color: #eee;
+}
+body.dark header,
+body.dark footer {
+  background: #000;
+}
+body.dark .portfolio-card,
+body.dark .hobby-card {
+  background: #1e1e1e;
+  color: #eee;
 }
