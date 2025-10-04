@@ -109,12 +109,15 @@
     <!-- Webサイト -->
     <h3 class="category">Webサイト</h3>
     <div class="portfolio-container">
+
+      <!-- 4. CatCoffee（HP） -->
       <div class="portfolio-card fade-in">
         <h4>CatCoffee</h4>
         <p>初めて作ったWebサイト。HTML/CSSで制作。</p>
-        <img src="screenshots/catcoffee-thumb.png" alt="CatCoffee" class="rounded mb-2">
-        <div>
-        <p>苦労ポイント：レスポンシブ対応、画像最適化</p>
+          <img src="screenshots/catcoffee-thumb.png" alt="CatCoffee" class="rounded mb-2">
+          <button onclick="toggleDetail('catcoffee-detail')">詳細を見る</button>
+        <div id="catcoffee-detail" class="app-detail hidden mt-2 p-2 border-t">
+          <p>苦労ポイント：<br>レスポンシブ対応、画像最適化</p>
           <p>
             <a href="https://www.portfoiio.online/"
             target="_blank">サイトを見る</a>
@@ -122,23 +125,36 @@
       </div>
     </div>
 
+    <!-- 5. SocialTech -->
     <div class="portfolio-card fade-in">
         <h4>Social Tech</h4>
-        <p>学習を深めて企業風サイトを制作。</p>
+        <p>学習を深めてコーポレートサイトを制作。HTML/CSSの実装力を示す作品。</p>
           <img src="screenshots/socialtech-thumb.png" alt="Social Tech" class="rounded mb-2">
-          <div>
-          <p>苦労ポイント：Flexbox、アニメーション</p>
+          <button onclick="toggleDetail('socialtech-detail')">詳細を見る</button>
+        <div id="socialtech-detail" class="app-detail hidden mt-2 p-2 border-t">
+          <p>HTML/CSSでデザイン再現。UI整列やグリッドレイアウトを中心に学習しました。</p>
+          <p>苦労ポイント：レスポンシブ、クロスブラウザ対応</p>
           <p>
-            <a href="https://html-css-advanced-202406ver-6c937a8fe355.herokuapp.com/"
-            target="_blank">サイトを見る</a>
+            <a href="https://html-css-advanced-202406ver-6c937a8fe355.herokuapp.com/" target="_blank">サイトを見る</a>
           </p>
+        </div>
       </div>
     </div>
-        
+
+      <!-- 6. My Portfolio (HTML版) -->
       <div class="portfolio-card fade-in">
         <h4>My Portfolio (HTML版)</h4>
         <p>このサイト自体をHTML/CSS/JavaScriptで作成。</p>
-      </div>
+          <img src="screenshots/myportfolio-thumb.png" alt="My Portfolio" class="rounded mb-2">
+          <button onclick="toggleDetail('sample1-detail')">詳細を見る</button>
+        <div id="sample1-detail" class="app-detail hidden mt-2 p-2 border-t">
+          <p>React基礎学習用。コンポーネント分割やステート管理を体験しました。</p>
+          <p>苦労ポイント：イベントハンドリング、状態同期</p>
+          <p>
+            <a href="https://github.com/yourname/sampleapp1"
+            target="_blank">GitHub</a> |
+          </p>
+        </div>
     </div>
 
     <!-- Reactリファクタリング -->
