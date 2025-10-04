@@ -1,4 +1,3 @@
-/* ベース */
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
@@ -6,11 +5,7 @@ body {
   color: #333;
   line-height: 1.6;
 }
-h1, h2, h3, h4 { margin: 0 0 10px; }
-a { color: #0077cc; text-decoration: none; }
-a:hover { text-decoration: underline; }
 
-/* ヘッダー */
 header {
   display: flex;
   justify-content: space-between;
@@ -19,116 +14,91 @@ header {
   color: #fff;
   padding: 10px 20px;
 }
-header nav a { margin-left: 15px; color: #fff; }
-#darkModeToggle {
+
+header nav a {
+  color: #fff;
   margin-left: 15px;
-  padding: 5px 10px;
-  cursor: pointer;
-  background: #444;
-  border: none;
-  border-radius: 4px;
-  color: #fff;
+  text-decoration: none;
 }
 
-/* ヒーロー */
-.hero {
-  text-align: center;
-  padding: 60px 20px;
-  background: linear-gradient(135deg, #0077cc, #00aacc);
-  color: #fff;
-}
-.hero .btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 20px;
-  background: #fff;
-  color: #0077cc;
-  border-radius: 6px;
-}
-
-/* セクション */
 section {
   padding: 40px 20px;
   max-width: 1000px;
   margin: auto;
 }
+
 h2 {
-  margin-bottom: 20px;
   border-bottom: 2px solid #0077cc;
   display: inline-block;
-}
-.category {
-  margin-top: 40px;
-  margin-bottom: 15px;
-  color: #0077cc;
+  margin-bottom: 20px;
 }
 
-/* Hobby */
-.hobby-container {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-.hobby-card {
-  flex: 1;
-  min-width: 250px;
-  background: #fff;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-/* Portfolio */
 .portfolio-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
 }
+
 .portfolio-card {
   background: #fff;
   padding: 15px;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-.portfolio-card img {
-  width: 100%;
-  border-radius: 4px;
-  margin-bottom: 10px;
-}
-.app-detail.hidden { display: none; }
-pre {
-  background: #f4f4f4;
-  padding: 10px;
-  overflow-x: auto;
-  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.2s;
 }
 
-/* フッター */
+.portfolio-card:hover {
+  transform: translateY(-3px);
+}
+
+.portfolio-card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.toggle-btn {
+  padding: 5px 10px;
+  width: 110px;
+  align-self: center;
+  border: none;
+  border-radius: 5px;
+  background: #0077cc;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background 0.3s;
+}
+
+.toggle-btn:hover {
+  background: #005fa3;
+}
+
+.app-detail {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  padding: 0;
+}
+
+.app-detail.show {
+  max-height: 600px;
+  padding-top: 10px;
+}
+
 footer {
   text-align: center;
-  padding: 15px;
   background: #222;
   color: #fff;
+  padding: 15px;
   margin-top: 30px;
 }
 
-/* アニメーション */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+.category {
+  margin-top: 40px;
+  color: #0077cc;
 }
-.fade-in.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ダークモード */
-body.dark {
-  background: #121212;
-  color: #eee;
-}
-body.dark header,
-body.dark footer { background: #000; }
-body.dark .portfolio-card,
-body.dark .hobby-card { background: #1e1e1e; color: #eee; }

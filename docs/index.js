@@ -29,8 +29,19 @@ toggleButton.addEventListener('click', () => {
   toggleButton.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
 });
 
+// 詳細ボタンの文字
+function toggleDetail(id, btn) {
+  const el = document.getElementById(id);
+  el.classList.toggle('show');
+  btn.textContent = el.classList.contains('show') ? '閉じる' : '詳細を見る';
+}
+
 // 詳細折りたたみ
 function toggleDetail(id) {
-  const detail = document.getElementById(id);
-  detail.classList.toggle("hidden");
+  const el = document.getElementById(id);
+  if (el.classList.contains('show')) {
+    el.classList.remove('show');
+  } else {
+    el.classList.add('show');
+  }
 }
