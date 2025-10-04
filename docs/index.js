@@ -30,11 +30,20 @@ toggleButton.addEventListener('click', () => {
 });
 
 // 詳細ボタンの文字
-function toggleDetail(id, btn) {
-  const el = document.getElementById(id);
-  el.classList.toggle('show');
-  btn.textContent = el.classList.contains('show') ? '閉じる' : '詳細を見る';
-}
+document.querySelectorAll('.show-detail').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const text = btn.nextElementSibling;
+    if (text.style.display === 'block') {
+      text.style.display = 'none';
+      btn.textContent = '詳細を表示';
+    } else {
+      text.style.display = 'block';
+      btn.textContent = '閉じる';
+    }
+  });
+});
+
+
 
 // 詳細折りたたみ
 function toggleDetail(id) {
