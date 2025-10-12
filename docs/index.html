@@ -1,216 +1,365 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Atakuya Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atakuya - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- ヘッダー -->
-  <header>
-    <div class="logo">Atakuya</div>
-    <nav>
-      <a href="#about">About</a>
-      <!-- <a href="#hobby">Hobby</a> -->
-      <a href="#portfolio">Portfolio</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <!-- ヒーロー -->
-  <section class="hero">
-    <div class="hero-inner">
-      <div class="hero-profile">
-        <img src="images/profile.jpg" alt="profile">
-        <div>
-          <h1>Atakuya（GitHub: atakuya-12915）</h1>
-          <p>Java / Spring Boot 初学者 → 実務レベルでリリースを目指す学習中</p>
+    <!-- ヘッダー -->
+    <header>
+        <div class="container">
+            <h1>Atakuya</h1>
+            <p class="subtitle">Java / Spring Boot バックエンドエンジニア志望</p>
+            <p class="subtitle">「現場の課題をコードで解決する」エンジニアを目指しています</p>
+            
+            <div class="value-proposition">
+                <h3>【30秒でわかる私の価値】</h3>
+                <ul>
+                    <li>製造業DXで「ゼロから仕組みを作り、成果を出す」経験7年</li>
+                    <li>グループ横断プロジェクトリーダーで月40h削減 → 社長賞受賞</li>
+                    <li>Java/Spring Boot で3つのWebアプリを設計〜デプロイまで完走</li>
+                    <li>「現場の課題をコードで解決する」ことに本気で取り組む</li>
+                </ul>
+            </div>
         </div>
-      </div>
-      <p class="hero-caption">Java × Spring Bootでの基盤開発＋Reactへの拡張に挑戦中</p>
+    </header>
+
+    <!-- 職務要約 -->
+    <section id="about">
+        <div class="container">
+            <h2>職務要約</h2>
+            <div class="summary">
+                製造業で生産管理・総務を7年経験し、<strong>DX推進の企画〜実装〜運用まで一貫して担当</strong>。RPA・Power Platformで業務プロセスを再設計し、グループ4社で月40時間の工数削減を実現しました。<br><br>
+                
+                また、生産管理では受注先・製造現場・外注先を統率し、総務では経営層・各部門長・現場意見をまとめる折衝経験を積みました。この経験から、<strong>多様なステークホルダーの視点を理解し、要件を仕様に落とし込む力</strong>を培っています。<br><br>
+                
+                現在はバックエンドエンジニアへのキャリアチェンジに向け、<strong>Java/Spring Boot を使った実践的な個人開発を継続中</strong>。「ユーザーの困りごとをシステムで解決する」経験を、より本格的な開発現場で活かしたいと考えています。
+            </div>
+        </div>
+    </section>
+
+    <!-- スキル -->
+    <section id="skills">
+        <div class="container">
+            <h2>技術スキル</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>💻 開発スキル（個人開発で実装済み）</h3>
+                    <table class="skill-table">
+                        <thead>
+                            <tr>
+                                <th>技術</th>
+                                <th>実装内容</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Java</strong></td>
+                                <td>Spring Boot でのREST API設計・実装（3アプリ）</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Spring Boot</strong></td>
+                                <td>Thymeleaf/MyBatis/Spring Security による認証基盤構築</td>
+                            </tr>
+                            <tr>
+                                <td><strong>SQL</strong></td>
+                                <td>MySQL での正規化設計・JOIN・トランザクション処理</td>
+                            </tr>
+                            <tr>
+                                <td><strong>React/TypeScript</strong></td>
+                                <td>SPA設計・useStateによる状態管理（学習継続中）</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Git/GitHub</strong></td>
+                                <td>ブランチ戦略・プルリク運用・CI/CD（GitHub Actions）</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Heroku</strong></td>
+                                <td>Webアプリの本番デプロイ・環境変数管理</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="skill-category">
+                    <h3>🔧 業務改善ツール（実務3年）</h3>
+                    <ul class="skill-list">
+                        <li><strong>Power Platform</strong>（Apps/Automate/BI）：ノーコード開発での業務アプリ設計</li>
+                        <li><strong>RPA/Excel VBA/マクロ</strong>：定型業務の自動化フロー構築・20以上の業務自動化ツール開発</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ポートフォリオ -->
+    <section id="portfolio">
+        <div class="container">
+            <h2>個人開発実績</h2>
+            <div class="portfolio-grid">
+                <!-- NAGOYAMESHI -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image">NAGOYAMESHI</div>
+                    <div class="portfolio-content">
+                        <h3>NAGOYAMESHI</h3>
+                        <p>食べログ風のレストラン検索・レビュー投稿アプリ</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">Thymeleaf</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Spring Security</span>
+                        </div>
+                        <button class="btn" onclick="showModal('nagoyameshi')">詳細を見る</button>
+                        <a href="https://nagoyameshi-app-2025-6a8adc2eb863.herokuapp.com/" target="_blank" class="btn btn-secondary">サイトを見る</a>
+                    </div>
+                </div>
+
+                <!-- SAMURAI travel -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image">SAMURAI travel</div>
+                    <div class="portfolio-content">
+                        <h3>SAMURAI travel</h3>
+                        <p>宿泊施設の検索・予約管理アプリ（Stripe決済連携）</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">Thymeleaf</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Stripe API</span>
+                        </div>
+                        <button class="btn" onclick="showModal('samurai')">詳細を見る</button>
+                        <a href="https://samuraitraberu202507-4b2082511052.herokuapp.com/" target="_blank" class="btn btn-secondary">サイトを見る</a>
+                    </div>
+                </div>
+
+                <!-- まもログ -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image">まもログ</div>
+                    <div class="portfolio-content">
+                        <h3>まもログ</h3>
+                        <p>日記機能付きTodoアプリ（オリジナル開発）</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                        <button class="btn" onclick="showModal('mamolog')">詳細を見る</button>
+                        <a href="https://mamolog-2025-8bc113ca827d.herokuapp.com/" target="_blank" class="btn btn-secondary">サイトを見る</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 資格・学歴 -->
+    <section id="credentials">
+        <div class="container">
+            <h2>資格・学歴</h2>
+            <div class="credentials-grid">
+                <div class="credential-box">
+                    <h3>📜 資格</h3>
+                    <ul>
+                        <li>Oracle Certified Java Programmer, Silver SE11（取得予定: 2025年12月）</li>
+                        <li>Microsoft Office Specialist Excel 365 Expert（1,000点満点、2024年11月 合格）</li>
+                        <li>第一種衛生管理者（2023年7月 取得）</li>
+                        <li>品質管理検定（QC検定）3級（2022年11月 合格）</li>
+                        <li>普通自動車第一種免許（2012年9月 取得）</li>
+                    </ul>
+                </div>
+
+                <div class="credential-box">
+                    <h3>🎓 学歴</h3>
+                    <ul>
+                        <li>2016年3月 愛知工業大学 工学部 化学科 卒業（専攻内成績 2位）</li>
+                        <li>2018年3月 愛知工業大学大学院 工学研究科 化学専攻 修了（成績 1位、支部長賞受賞）
+                            <ul style="margin-left: 20px; margin-top: 5px;">
+                                <li>大手フィルターメーカーとの共同開発プロジェクトに参画</li>
+                                <li>国際学会（ロシア）で研究成果を発表</li>
+                                <li>研究テーマ：血液中の発がん物質を定量するための特殊フィルター合成</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 自己PR -->
+    <section id="pr">
+        <div class="container">
+            <h2>自己PR</h2>
+            <div class="pr-grid">
+                <div class="pr-item">
+                    <h3>強み① 課題発見→実装→成果創出を高速PDCAで実現</h3>
+                    <p>製造業で7年間、結果重視の環境で業務改善のPDCAを20件以上高速で回してきました。</p>
+                    <ul>
+                        <li><strong>ローコスト・ローリスクでの改善実現</strong><br>
+                        限られた予算・人員の中で、Power PlatformやRPAなど既存ツールを最大活用し、外部ベンダーに頼らず内製化を推進。コストを抑えながら月40時間の工数削減を実現。</li>
+                        <li><strong>技術調査→提案→導入→教育の全工程を自走</strong><br>
+                        DXプロジェクトでは、技術選定から役員への提案、現場への教育まで一貫して主導。非IT人材の理解を得ながら全社展開に成功。この経験から、要件定義力・実装力・運用視点を兼ね備え、ステークホルダーを巻き込みながらゴールまで走り切る力を培いました。</li>
+                    </ul>
+                </div>
+
+                <div class="pr-item">
+                    <h3>強み② 「巻き込み力」でチーム開発を推進</h3>
+                    <p>グループ4社横断プロジェクトでは、リーダーとして8名をまとめ、ステークホルダー調整を重ねながら目標を達成。開発現場でも、ディレクター・デザイナー・他エンジニアと円滑に連携できる自信があります。</p>
+                </div>
+
+                <div class="pr-item">
+                    <h3>強み③ 「技術への探究心」で継続的に成長</h3>
+                    <p>スクールの24週Javaコースを18週で完走。「わからないことを、わかるまでやる」粘り強さは、技術の変化が速いIT業界で必ず武器になると自負しています。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- コンタクト -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <p>お気軽にご連絡ください</p>
+                <a href="https://github.com/atakuya-12915" target="_blank">GitHub</a>
+                <a href="mailto:t@gmail.com">Email</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Atakuya Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- モーダル（NAGOYAMESHI） -->
+    <div id="modal-nagoyameshi" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('nagoyameshi')">&times;</span>
+            <h2>NAGOYAMESHI</h2>
+            <p><strong>食べログ風レストラン検索・レビュー投稿アプリ</strong></p>
+            
+            <h3>📝 概要</h3>
+            <p>「ユーザーが飲食店を探しやすく、信頼できるレビューを投稿できる仕組み」を目指して開発しました。</p>
+            
+            <h3>🛠️ 使用技術</h3>
+            <ul>
+                <li>Java 17</li>
+                <li>Spring Boot 3.2.0</li>
+                <li>MySQL 8.0</li>
+                <li>Thymeleaf</li>
+                <li>Spring Security</li>
+            </ul>
+            
+            <h3>✨ 実装機能</h3>
+            <ul>
+                <li>会員登録・ログイン認証（一般/管理者）</li>
+                <li>レストラン検索（エリア・価格帯・評価での絞り込み）</li>
+                <li>レビュー投稿・編集・削除機能</li>
+                <li>お気に入り登録（多対多のリレーション設計）</li>
+            </ul>
+            
+            <h3>🔧 工夫した点</h3>
+            <ul>
+                <li>MyBatisでの複雑なJOIN処理の実装</li>
+                <li>Spring Securityでのロール別アクセス制御</li>
+                <li>Thymeleafでの動的UI生成</li>
+            </ul>
+            
+            <h3>🔗 リンク</h3>
+            <p>
+                <a href="https://nagoyameshi-app-2025-6a8adc2eb863.herokuapp.com/" target="_blank" class="btn">デプロイサイト</a>
+                <a href="https://github.com/atakuya-12915/springboot-tabelog-kadai" target="_blank" class="btn btn-secondary">GitHub</a>
+            </p>
+        </div>
     </div>
-  </section>
 
-  <!-- About -->
-  <section id="about" class="section about">
-    <h2>About</h2>
-    <div class="about-grid">
-      <div class="about-left">
-        <p>"現場目線で『見える化』をつくるフロント寄りバックエンド志向エンジニア"</p>
-        <p>経歴・実績：工場総務（PCキッティング50台、RPA月5件）、DX推進リーダー、Power BIで可視化経験</p>
-      </div>
-      <div class="about-right">
-        <div>
-          <h3>スキル／ツール</h3>
-          <ul>
-            <li>Java, Spring Boot（個人開発）</li>
-            <li>React / TypeScript（学習中）</li>
-            <li>SQL, Git</li>
-            <li>Power Platform（Power BI, Power Automate, Power Apps）/ 業務改善</li>
-            <li>Illustrator / 社内報作成</li>
-          </ul>
+    <!-- モーダル（SAMURAI travel） -->
+    <div id="modal-samurai" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('samurai')">&times;</span>
+            <h2>SAMURAI travel</h2>
+            <p><strong>宿泊施設の検索・予約管理アプリ</strong></p>
+            
+            <h3>📝 概要</h3>
+            <p>民宿・ホテルの検索から予約、決済までを一貫して管理できるアプリです。</p>
+            
+            <h3>🛠️ 使用技術</h3>
+            <ul>
+                <li>Java 17</li>
+                <li>Spring Boot 3.2.0</li>
+                <li>MySQL 8.0</li>
+                <li>Thymeleaf</li>
+                <li>Stripe API</li>
+            </ul>
+            
+            <h3>✨ 実装機能</h3>
+            <ul>
+                <li>宿泊施設の検索・詳細表示</li>
+                <li>カレンダーから宿泊予約（日付・人数指定）</li>
+                <li>Stripe連携による決済機能（テスト環境）</li>
+                <li>予約履歴の確認・キャンセル処理</li>
+            </ul>
+            
+            <h3>🔧 工夫した点</h3>
+            <ul>
+                <li>外部API（Stripe）との連携実装</li>
+                <li>エラーハンドリングの徹底</li>
+                <li>トランザクション処理による予約データの整合性確保</li>
+            </ul>
+            
+            <h3>🔗 リンク</h3>
+            <p>
+                <a href="https://samuraitraberu202507-4b2082511052.herokuapp.com/" target="_blank" class="btn">デプロイサイト</a>
+                <a href="https://github.com/atakuya-12915/spring-minshuku-kadai" target="_blank" class="btn btn-secondary">GitHub</a>
+            </p>
         </div>
-        <div>
-          <h3>学歴 / 資格</h3>
-          <p>大学（化学）→ 大学院（研究） / 衛生管理者 1種, MOS 365 Expert 他 <br>
-             （詳細は職務経歴書に記載）</p>
-        </div>
-      </div>
-    </div>
-    <hr>
-    <p>自己PR：現場の『困りごと』を技術で可視化して解決することに喜びを感じる。失敗を分解して次に活かす姿勢が強み。短期で実務投入できるレベルを目標に、品質を重視してアプリを設計・実装している。</p>
-    <div class="timeline">
-      <h4>ロードマップ</h4>
-      <ol>
-        <li>2025 Q2 — 基礎固め: Java/Spring Boot入門、SQL復習</li>
-        <li>2025 Q3 — ミニプロダクト: Todoカレンダー（Spring Boot + React, Docker化）</li>
-        <li>2025 Q4 — 仕上げ: テスト、CI、README・面接用ドキュメント整備、AWS/GCPでデプロイ</li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- Hobby -->
-  <!-- <section id="hobby" class="section hobby">
-    <h2>Hobby</h2>
-    <div class="hobby-grid">
-
-      <div class="hobby-card" style="background-image: url('images/cofee.png')">
-        <h3>コーヒー</h3>
-        <button class="show-detail">詳細を表示</button>
-        <p class="detail-text">毎朝豆を挽いて淹れる1杯が創造の原点。「CatCoffee」はこの日課から生まれました。</p>
-      </div>
-
-      <div class="hobby-card" style="background-image: url('images/travel.png')">
-        <h3>旅行</h3>
-        <button class="show-detail">詳細を表示</button>
-        <p class="detail-text">旅先で得た発見やワクワク感をアプリUIに。「SAMURAI travel」に活かしました。</p>
-      </div>
-
-      <div class="hobby-card" style="background-image: url('images/plant.png')">
-        <h3>観葉植物</h3>
-        <button class="show-detail">詳細を表示</button>
-        <p class="detail-text">自然のバランス感覚と癒しを配色・レイアウトの発想源に。柔らかい印象のデザインへ反映しています。</p>
-      </div>
-
-    </div>
-  </section> -->
-
-  <!-- Portfolioセクション -->
-  <section id="portfolio">
-    <h2>Portfolio</h2>
-
-    <!-- Webアプリ -->
-    <h3 class="category">Webアプリ</h3>
-    <div class="portfolio-container">
-      <div class="portfolio-card">
-        <h4>NAGOYAMESHI</h4>
-        <p>SpringBoot学習の集大成。Herokuにデプロイ済。</p>
-        <img src="screenshots/nagoyameshi-thumb.png" alt="NAGOYAMESHI">
-        <button class="toggle-btn" onclick="toggleDetail('nagoyameshi-detail', this)">詳細を見る</button>
-        <div id="nagoyameshi-detail" class="app-detail">
-          <p>Spring Boot + Thymeleaf でフルスタック開発を体験。REST APIやDB設計を習得しました。</p>
-          <p><a href="https://github.com/atakuya-12915/springboot-tabelog-kadai" target="_blank">GitHub</a> | <a href="https://nagoyameshi-app-2025-6a8adc2eb863.herokuapp.com/" target="_blank">公開アプリ</a></p>
-        </div>
-      </div>
-
-      <div class="portfolio-card">
-        <h4>SAMURAI travel</h4>
-        <p>旅行の楽しさを表現した民宿予約アプリ。</p>
-        <img src="screenshots/samurai-travel-thumb.png" alt="SAMURAI travel">
-        <button class="toggle-btn" onclick="toggleDetail('samurai-detail', this)">詳細を見る</button>
-        <div id="samurai-detail" class="app-detail">
-          <p>React + Firebase で実装。UX改善や予約フローに注力。</p>
-          <p><a href="https://github.com/atakuya-12915/spring-minshuku-kadai" target="_blank">GitHub</a> | <a href="https://samuraitraberu202507-4b2082511052.herokuapp.com/" target="_blank">公開アプリ</a></p>
-        </div>
-      </div>
-
-      <div class="portfolio-card">
-        <h4>まもログ</h4>
-        <p>オリジナルWebアプリ。（Reactリファクタリング版も製作中）</p>
-        <img src="screenshots/mamolog-thumb.png" alt="まもログ">
-        <button class="toggle-btn" onclick="toggleDetail('mamolog-detail', this)">詳細を見る</button>
-        <div id="mamolog-detail" class="app-detail">
-          <p>Todo管理、日記/写真アップロード、カレンダー機能、認証を搭載。</p>
-          <p><a href="https://github.com/atakuya-12915/mamolog-app" target="_blank">GitHub</a>
-           | <a href="https://mamolog-2025-8bc113ca827d.herokuapp.com/" target="_blank">公開アプリ</a></p>
-        </div>
-      </div>
     </div>
 
-    <!-- Webサイト -->
-    <h3 class="category">Webサイト</h3>
-    <div class="portfolio-container">
-      <div class="portfolio-card">
-        <h4>CatCoffee</h4>
-        <p>初めて作ったWebサイト。HTML/CSSで制作。</p>
-        <img src="screenshots/catcoffee-thumb.png" alt="CatCoffee">
-        <button class="toggle-btn" onclick="toggleDetail('catcoffee-detail', this)">詳細を見る</button>
-        <div id="catcoffee-detail" class="app-detail">
-          <p>苦労ポイント：<br>レスポンシブ対応、画像最適化</p>
-          <p><a href="https://www.portfoiio.online/" target="_blank">サイトを見る</a></p>
+    <!-- モーダル（まもログ） -->
+    <div id="modal-mamolog" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('mamolog')">&times;</span>
+            <h2>まもログ</h2>
+            <p><strong>日記機能付きTodoアプリ（オリジナル開発）</strong></p>
+            
+            <h3>📝 概要</h3>
+            <p>日々のタスク管理と日記を一元管理できるアプリです。カレンダービューで予定と振り返りを可視化します。</p>
+            
+            <h3>🛠️ 使用技術</h3>
+            <ul>
+                <li>Spring Boot 3.2.0</li>
+                <li>React 18</li>
+                <li>TypeScript</li>
+                <li>MySQL 8.0</li>
+                <li>FullCalendar.js</li>
+            </ul>
+            
+            <h3>✨ 実装機能</h3>
+            <ul>
+                <li>Todo登録・完了管理・優先度設定</li>
+                <li>日記機能（写真添付・Markdown対応）</li>
+                <li>カレンダービューでの予定・日記の一覧表示</li>
+                <li>React Hooks（useState/useEffect）での状態管理</li>
+            </ul>
+            
+            <h3>🔧 工夫した点</h3>
+            <ul>
+                <li>フロントエンドとバックエンドの完全分離（REST API設計）</li>
+                <li>React Hooksを使った効率的な状態管理</li>
+                <li>FullCalendar.jsを使った直感的なUI設計</li>
+            </ul>
+            
+            <h3>🔗 リンク</h3>
+            <p>
+                <a href="https://mamolog-2025-8bc113ca827d.herokuapp.com/" target="_blank" class="btn">デプロイサイト</a>
+                <a href="https://github.com/atakuya-12915/mamolog-app" target="_blank" class="btn btn-secondary">GitHub</a>
+            </p>
         </div>
-      </div>
-
-      <div class="portfolio-card">
-        <h4>Social Tech</h4>
-        <p>コーポレートサイト風にデザイン再現。HTML/CSSの実装力を示す作品。</p>
-        <img src="screenshots/socialtech-thumb.png" alt="Social Tech">
-        <button class="toggle-btn" onclick="toggleDetail('socialtech-detail', this)">詳細を見る</button>
-        <div id="socialtech-detail" class="app-detail">
-          <p>グリッドレイアウトとレスポンシブ対応を学習しました。</p>
-          <p><a href="https://html-css-advanced-202406ver-6c937a8fe355.herokuapp.com/" target="_blank">サイトを見る</a></p>
-        </div>
-      </div>
-
-      <div class="portfolio-card">
-        <h4>My Portfolio (HTML版)</h4>
-        <p>このサイト自体をHTML/CSS/JavaScriptで作成。</p>
-        <img src="screenshots/myportfolio-thumb.png" alt="My Portfolio">
-        <button class="toggle-btn" onclick="toggleDetail('sample1-detail', this)">詳細を見る</button>
-        <div id="sample1-detail" class="app-detail">
-          <p>React基礎学習用。コンポーネント分割やステート管理を体験しました。</p>
-          <p><a href="https://atakuya-12915.github.io/portfolio/" target="_blank">サイトを見る</a></p>
-        </div>
-      </div>
     </div>
 
-    <!-- Reactリファクタリング -->
-    <h3 class="category">Reactリファクタリング</h3>
-    <div class="portfolio-container">
-      <div class="portfolio-card fade-in">
-        <h4>まもログ React版</h4>
-        <p>進行中：認証機能まで実装済。UI改善中。</p>
-        <pre><code>{// サンプルコード断片
-const [todos, setTodos] = useState([]);
-useEffect(() => {
-  fetch("/api/todos")
-    .then(res => res.json())
-    .then(setTodos);
-}, []);
-}</code></pre>
-      </div>
-      <div class="portfolio-card fade-in">
-        <h4>My Portfolio (React版)</h4>
-        <p>完成済：本HTML版をReactへ移植。SPA構成に対応。</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="fade-in">
-    <h2>Contact</h2>
-    <p>GitHub: <a href="https://github.com/atakuya-12915" target="_blank">atakuya-12915</a></p>
-    <p>Email: atakuya@mail.com</p>
-  </section>
-
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Atakuya Portfolio</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
