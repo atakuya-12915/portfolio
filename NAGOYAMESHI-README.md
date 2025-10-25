@@ -53,7 +53,7 @@ src/ ├── main/ │ ├── java/ │ │ └── com/example/nagoyames
 Herokuで公開中: https://nagoyameshi-app-2025-6a8adc2eb863.herokuapp.com/
 
 ### テストアカウント
-- 一般ユーザー: user@example.com / password
+- 一般ユーザー: samuraitaro.samurai@example.com / password
 - 管理者: admin@example.com / password
 
 ## 📌 今後の実装予定

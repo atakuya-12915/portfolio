@@ -42,8 +42,8 @@
 ### バックエンド
 | 技術 | バージョン |
 |------|-----------|
-| **Java** | 17 |
-| **Spring Boot** | 3.2.0 |
+| **Java** | 21 |
+| **Spring Boot** | 3.5.5 |
 | **MySQL** | 8.0 |
 | **MyBatis** | 3.0.3 |
 | **Spring Security** | 6.2.0 |
@@ -242,7 +242,7 @@ frontend/
 **Herokuで公開中**：https://mamolog-2025-8bc113ca827d.herokuapp.com/
 
 ### テストアカウント
-- **Email**: user@example.com
+- **Email**: papa@mamolog.com
 - **Password**: password
 
 ---
@@ -311,7 +311,7 @@ frontend/
 ## 📧 Contact
 質問・フィードバックは以下までお願いします：
 - **GitHub**: https://github.com/atakuya-12915
-- **Email**: t@gmail.com
+- **Email**: atakuya.wan@gmail.com
 
 ---
 

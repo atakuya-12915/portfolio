@@ -155,7 +155,7 @@ src/
 **Herokuで公開中**：https://samuraitraberu202507-4b2082511052.herokuapp.com/
 
 ### テストアカウント
-- **一般ユーザー**：user@example.com / password
+- **一般ユーザー**：taro.samurai@example.com / password
 - **管理者**：admin@example.com / password
 
 ### テスト用Stripeカード番号
@@ -219,7 +219,7 @@ src/
 ## 📧 Contact
 質問・フィードバックは以下までお願いします：
 - **GitHub**: https://github.com/atakuya-12915
-- **Email**: t@gmail.com
+- **Email**: atakuya.wan@gmail.com
 
 ---
 
