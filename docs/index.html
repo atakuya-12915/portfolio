@@ -86,11 +86,11 @@
                     <div class="portfolio-image">まもログ</div>
                     <div class="portfolio-content">
                         <h3>まもログ</h3>
-                        <p>日記機能付きTodoアプリ（オリジナル開発）</p>
+                        <p>「タスク × 日記 × カレンダー」 を一体化した学習型アプリ（オリジナル開発）</p>
                         <div class="tech-tags">
                             <span class="tech-tag">Spring Boot</span>
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">FullCalendar</span>
+                            <span class="tech-tag">JavaScript</span>    
                             <span class="tech-tag">MySQL</span>
                         </div>
                         <button class="btn" onclick="showModal('mamolog')">詳細を見る</button>
@@ -601,7 +601,10 @@
 
             
             <h3>📝 概要</h3>
-            <p>日々のタスク管理と日記を一元管理できるアプリです。カレンダービューで予定と振り返りを可視化します。</p>
+            <p>日々の予定を「まもり」、記録を「残す」。学習・育児・仕事を両立する個人開発者として、“現実的に使えるプロダクト”を意識して作成しました。
+            単なるToDoアプリではなく、「日々の学びや感情も記録できる」**ようにすることで、
+            “日常の成長を見える化” できる仕組みを作りたいと思い開発をスタートしました。
+            </p>
             
             <h3>🛠️ 使用技術</h3>
             <ul>
@@ -609,28 +612,50 @@
                 <li>Spring Boot 3.5.5</li>
                 <li>Spring Security</li>
                 <li>MySQL 8.0</li>
-                <li>FullCalendar.js</li>
+                <li>ライブラリ：FullCalendar.js, Bootstrap</li>
             </ul>
             
             <h3>✨ 実装機能</h3>
             <ul>
-                <li>Todo登録・完了管理・優先度設定</li>
-                <li>日記機能（写真添付・Markdown対応）</li>
-                <li>カレンダービューでの予定・日記の一覧表示</li>
+                <li>✅ Todo管理
+CRUD、完了管理、ページネーション、タブ切替、タグ選択、件数表示、タイル風レイアウト
+</li>
+                <li>📖 日記管理
+CRUD、カテゴリ管理、ページネーション、入力バリデーション
+</li>
+                <li>📅 カレンダー
+FullCalendar連携、Ajax反映、日別Todo自動表示
+</li>
+                <li>🔐 認証機能
+Spring Securityによるログイン／ログアウト、アカウント登録、パスワード暗号化
+</li>
+                <li>🏠 Home画面
+Todo件数表示、日記・カレンダーへのナビゲーションバー付き統合画面
+</li>
                 <!-- <li>React Hooks（useState/useEffect）での状態管理</li> -->
             </ul>
             
-            <h3>🔧 工夫した点</h3>
+            <h3>🔧 苦労した点</h3>
             <ul>
+                タブ切替とページ遷移イベントの競合
+                <li>Ajax通信後のDOM再描画制御</li>
+                <li>Thymeleaf内での複数リスト表示管理</li>
+                <li>カードレイアウト崩れの調整（CSS）</li>
+                <li>認証機能の実装とセキュリティ強化</li>
                 <!-- <li>フロントエンドとバックエンドの完全分離（REST API設計）</li> -->
                 <!-- <li>React Hooksを使った効率的な状態管理</li> -->
-                <li>FullCalendar.jsを使った直感的なUI設計</li>
             </ul>            
 
-              <h3>📂 詳細はGitHubをご覧ください</h3>
+            <ul>💡 今後の展望</ul>
+            <li>REST API化してフロントエンドとバックエンドを分離し、ReactでUIを再構築。</li>
+            <li>さらに、モバイルアプリ化も視野に入れています。</li>
+            <li>通知・タグ別分析・グラフ機能の追加</li>
+            <li>Docker Composeによるローカル環境構築</li>
+
+            <h3>📂 詳細はGitHubをご覧ください</h3>
     <p>
         <a href="https://github.com/atakuya-12915/mamolog-app" target="_blank" class="btn">
-            GitHubで詳細を見る（README充実）
+            GitHubで詳細を見る
         </a>
         <a href="https://mamolog-2025-8bc113ca827d.herokuapp.com/" target="_blank" class="btn btn-secondary">
             デプロイサイトを見る

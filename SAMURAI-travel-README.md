@@ -3,7 +3,6 @@
 ## 📸 スクリーンショット
 - トップ画面
 ![alt text](samurai-top.png)
-![alt text](image.png)
 - 検索画面
 ![alt text](samurai-serch.png)
 - 店舗予約画面
